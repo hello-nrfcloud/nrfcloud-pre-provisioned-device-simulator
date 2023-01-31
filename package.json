@@ -1,0 +1,26 @@
+{
+  "name": "@coderbyheart/nrf-cloud-pre-provisioned-device-simulator",
+  "version": "0.0.0-development",
+  "description": "Simulates a pre-provisioned device on nRF Cloud that is ready to connect",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderbyheart/nrf-cloud-pre-provisioned-device-simulator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/coderbyheart/nrf-cloud-pre-provisioned-device-simulator/issues"
+  },
+  "homepage": "https://github.com/coderbyheart/nrf-cloud-pre-provisioned-device-simulator#readme",
+  "keywords": [
+    "nrf-cloud",
+    "cellular-iot"
+  ],
+  "author": "Nordic Semiconductor ASA | nordicsemi.no",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "chalk": "5.2.0"
+  },
+  "dependencies": {
+    "mqtt": "4.3.7"
+  }
+}
