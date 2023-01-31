@@ -21,7 +21,7 @@ const client = connect({
   host: account.mqttEndpoint,
   port: 8883,
   rejectUnauthorized: true,
-  clientId: deviceId,
+  clientId: `nrf-${deviceId}`,
   protocol: "mqtts",
   protocolVersion: 4,
   key: await readFile(
