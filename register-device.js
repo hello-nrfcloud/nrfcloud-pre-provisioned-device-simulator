@@ -7,7 +7,7 @@ console.log(`Registering device`, deviceId);
 
 const body = [
   [
-    `nrf-${deviceId}`,
+    deviceId,
     "PCA10090",
     "family:nRF9|model:PCA10090",
     "APP|MODEM",

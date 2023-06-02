@@ -14,8 +14,7 @@ const account = await (
 
 console.log(chalk.magenta(`MQTT endpoint`), chalk.blue(account.mqttEndpoint));
 
-const imei = process.argv[process.argv.length - 1];
-const deviceId = `nrf-${imei}`;
+const deviceId = process.argv[process.argv.length - 1];
 console.log(`Connecting device`, deviceId);
 
 const client = connect({
@@ -26,11 +25,11 @@ const client = connect({
   protocol: "mqtts",
   protocolVersion: 4,
   key: await readFile(
-    path.join(process.cwd(), "certificates", `device.${imei}.key`),
+    path.join(process.cwd(), "certificates", `device.${deviceId}.key`),
     "utf-8"
   ),
   cert: await readFile(
-    path.join(process.cwd(), "certificates", `device.${imei}.signed.cert`),
+    path.join(process.cwd(), "certificates", `device.${deviceId}.signed.cert`),
     "utf-8"
   ),
   ca: await readFile(path.join(process.cwd(), "AmazonRootCA1.pem"), "utf-8"),
@@ -87,7 +86,7 @@ client.on("connect", async () => {
     {
       dev: {
         v: {
-          imei: imei,
+          imei: deviceId.replace(/[^0-9]/g, ""),
           iccid: "8901234567890123456",
           modV: "mfw_nrf9160_1.3.4",
           brdV: "thingy91_nrf9160",
