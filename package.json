@@ -21,6 +21,6 @@
     "chalk": "5.3.0"
   },
   "dependencies": {
-    "mqtt": "5.10.1"
+    "mqtt": "5.10.2"
   }
 }
