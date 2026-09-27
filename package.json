@@ -18,7 +18,7 @@
   "author": "Nordic Semiconductor ASA | nordicsemi.no",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "chalk": "6.0.0",
+    "chalk": "6.0.1",
     "check-node-version": "4.2.1"
   },
   "dependencies": {
